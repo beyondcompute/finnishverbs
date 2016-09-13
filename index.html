@@ -125,10 +125,11 @@ ractive.on('submit', function(e) {
     var items = ractive.get('items');
     for (var i = 0, l = items.length; i<l; i++) {
       var item = items[i];
-      if (item.inflection === item.input) {
+      var input = item.input.trim().toLowerCase();
+      if (item.inflection === input) {
         items[i].diff = CHECKMARK;
       } else {
-        var diff = JsDiff.diffChars(item.input, item.inflection);
+        var diff = JsDiff.diffChars(input, item.inflection);
         items[i].diff = colorDiff(diff);
       }
     }
