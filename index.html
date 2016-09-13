@@ -63,7 +63,7 @@ Copyright (c) Nicolas Gallagher and Jonathan Neal
       {{#items:i}}
         <div class="pure-control-group">
           <label for="field_{{i}}">{{pronoun}}</label>
-          <input id="field_{{i}}" value="{{input}}" type="text" autocomplete="off" {{#i == 0}}autofocus{{/i}}>
+          <input id="field_{{i}}" value="{{input}}" type="text" autocapitalize="none" autocomplete="off">
           <div class="info">{{{diff}}}</div>
         </div>
       {{/items}}
